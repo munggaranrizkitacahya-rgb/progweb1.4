@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Latihan 06 - News Portal / Magazine Layout</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: Georgia, serif; background: #fff7ed; color: #1c1917; }
+  .wrap { max-width: 1120px; margin: auto; padding: 36px 20px; }
+  .wrap h1 { margin-bottom: 20px; }
+  .news {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+  .article {
+    background: white;
+    border: 1px solid #fed7aa;
+    border-radius: 18px;
+    overflow: hidden;
+  }
+  .article .img {
+    height: 140px;
+    background: linear-gradient(135deg, #fb923c, #facc15);
+  }
+  .article-body { padding: 18px; }
+  .featured { grid-column: span 2; }
+  .featured .img { height: 300px; }
+  .tag {
+    font: 700 12px Arial;
+    color: #ea580c;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+  }
+  .article h2 { margin: 8px 0 4px; font-size: 1.1rem; }
+  .article h3 { margin: 8px 0 0; font-size: .95rem; }
+  .article p  { color: #64748b; font-size: .88rem; margin-top: 6px; }
+  @media (max-width: 850px) {
+    .news { grid-template-columns: 1fr; }
+    .featured { grid-column: auto; }
+    .featured .img { height: 190px; }
+  }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <h1>Indorama Tech News</h1>
+  <section class="news">
+    <article class="article featured">
+      <div class="img"></div>
+      <div class="article-body">
+        <span class="tag">Headline</span>
+        <h2>Mahasiswa TRPL Bangun Dashboard Industri</h2>
+        <p>Implementasi CSS Grid untuk layout modern yang efisien dan responsif.</p>
+      </div>
+    </article>
+    <article class="article">
+      <div class="img"></div>
+      <div class="article-body"><span class="tag">Web</span><h3>Grid vs Flexbox</h3></div>
+    </article>
+    <article class="article">
+      <div class="img"></div>
+      <div class="article-body"><span class="tag">Karier</span><h3>Skill Front-End 2026</h3></div>
+    </article>
+    <article class="article">
+      <div class="img"></div>
+      <div class="article-body"><span class="tag">UI</span><h3>Desain Card Modern</h3></div>
+    </article>
+  </section>
+</main>
+</body>
+</html>

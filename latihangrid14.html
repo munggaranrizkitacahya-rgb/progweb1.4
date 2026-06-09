@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Latihan 14 - Semantic Responsive Landing Page</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: Inter, Arial, sans-serif; color: #0f172a; background: #fff; }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .brand { font-weight: 900; color: #1d4ed8; }
+  nav { color: #64748b; font-size: .88rem; }
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+    padding: 64px 8%;
+    background: #f8fafc;
+  }
+  .hero h1 { font-size: clamp(2rem, 5vw, 4rem); line-height: 1; margin: 0 0 16px; }
+  .hero p  { color: #64748b; font-size: .95rem; margin: 0; }
+  .mockup {
+    min-height: 340px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #dbeafe, #14b8a6);
+  }
+  .features {
+    padding: 44px 8%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+  }
+  .feature {
+    border: 1px solid #e2e8f0;
+    border-radius: 22px;
+    padding: 20px;
+  }
+  .feature h2 { margin: 0 0 8px; font-size: 1rem; }
+  .feature p  { color: #64748b; font-size: .88rem; margin: 0; }
+  footer {
+    text-align: center;
+    padding: 24px;
+    background: #0f172a;
+    color: #94a3b8;
+    font-size: .82rem;
+  }
+  @media (max-width: 820px) {
+    .hero { grid-template-columns: 1fr; }
+    .mockup { order: -1; min-height: 240px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">IndoramaApps</div>
+  <nav>Produk | Solusi | Kontak</nav>
+</header>
+<main>
+  <section class="hero" aria-labelledby="hero-title">
+    <div>
+      <h1 id="hero-title">Platform Web Industri Modern</h1>
+      <p>Bangun antarmuka cepat, responsif, dan siap produksi.</p>
+    </div>
+    <div class="mockup" role="img" aria-label="Ilustrasi dashboard aplikasi"></div>
+  </section>
+  <section class="features">
+    <article class="feature">
+      <h2>Responsive</h2>
+      <p>Grid menyesuaikan semua layar.</p>
+    </article>
+    <article class="feature">
+      <h2>Maintainable</h2>
+      <p>Struktur CSS mudah dirawat.</p>
+    </article>
+    <article class="feature">
+      <h2>Scalable</h2>
+      <p>Cocok untuk komponen besar.</p>
+    </article>
+  </section>
+</main>
+<footer>© 2026 IndoramaApps</footer>
+</body>
+</html>
